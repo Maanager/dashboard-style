@@ -1,0 +1,37 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #2C2F33;
+}
+
+.avatar{
+    position: absolute;
+    top: 15px;
+    right: 120px;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+.avatar:hover{
+    border-radius: 30%;
+}
+
+.username{
+    position: absolute;
+    right: 7px;
+    top: 15px;
+    color: white;
+}
+
+.text{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 2px 0 0 #000000, -2px 0 0 #000000, 0 2px 0 #000000;
+
+}
+
