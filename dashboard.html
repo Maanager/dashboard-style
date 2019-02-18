@@ -10,7 +10,7 @@
       }
       body {
         background-size: cover;
-        background-image: url(https://cdn.glitch.com/f0d15358-97dc-47cb-896b-7d1a13f7c123%2Fbackground.jpg?1548874367063);
+        background-color: #757575;
         background-repeat: no-repeat;
         background-position: right top;
         background-attachment: fixed;
@@ -37,13 +37,10 @@
   </head>
   <body>
     <!-- Navbar -->
-  <nav>
+  <nav class="grey darken-4">
     <div class="font nav-wrapper">
       <ul class="left hide-on-med-and-down">
-        <li class="right"><a onclick="undoToast()">
-          Undo Changes
-          <i class="material-icons right">undo</i>
-        </a></li>
+        <a href="#" class="brand-logo center">Assassin</a>
         <li class="right"><a onclick="saveChanges()">
           Save Changes
           <i class="material-icons right">save</i>
@@ -52,18 +49,14 @@
           Home
           <i class="material-icons right">home</i>
         </a></li>
-        <li><a href="/settings.html">
-          Bot Settings
-          <i class="material-icons right">developer_board</i>
-        </a></li>
         <li><a href="/#">
           More
           <i class="material-icons right">more</i>
         </a></li>
       </ul>
       <ul>
-        <li class="right"><a href="/login.html">
-          Login
+        <li class="right"><a href="#">
+          The Champion
           <i class="material-icons right">account_box</i>
         </a></li>
       </ul>
@@ -73,9 +66,9 @@
     <div class="col s12 m6">
       <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
           <a class="btn-floating btn-large right waves-effect waves-light red" href="basic.html"><i class="material-icons">edit</i></a>
-        <div class="card-content white-text">
-          <span class="card-title">Basic</span>
-          <p>Basic things about assassin, such as nickname and prefix</p>
+        <div class="card-content white-text center">
+          <span class="card-title center">Basic</span>
+          <p class="center">Basic things for assassin, such as nickname and prefix</p>
         </div>
       </div>
       <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
@@ -112,7 +105,7 @@
           <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
         <div class="card-content white-text">
           <span class="card-title">Welcoming</span>
-          <p>What assassin does when a new user joins the server</p>
+          <p>When a new user joins</p>
         </div>
       </div>
       <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
