@@ -4,6 +4,8 @@
     <title>Manager-Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
     <script src="script.js" rel="script"></script>
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -46,7 +48,7 @@ function fadeIn() {
 animateCSS('nav', 'fadeIn');
 animateCSS('.row', 'fadeIn');
 animateCSS('.right', 'fadeIn');
-animateCSS('stats', 'fadeIn');
+animateCSS('.m12', 'fadeIn');
 }
   </script>
   </head>
@@ -79,60 +81,60 @@ animateCSS('stats', 'fadeIn');
       </ul>
     </div>
   </nav>
-  <div class="row left">
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
-          <a class="btn-floating btn-large right waves-effect waves-light red" href="basic.html"><i class="material-icons">edit</i></a>
-        <div class="card-content white-text center">
-          <span class="card-title center">Basic</span>
-          <p class="center">Basic things for assassin, such as nickname and prefix</p>
-        </div>
-      </div>
-      <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="card blue-grey darken-3">
           <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
         <div class="card-content white-text">
-          <span class="card-title">Music</span>
-          <p>Music configuation for assassin</p>
+          <span class="card-title">Basic</span>
+          <p>Basic functions of manager</p>
         </div>
       </div>
-      <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
+      <div class="card blue-grey darken-3">
           <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
         <div class="card-content white-text">
           <span class="card-title">Moderation</span>
-          <p>Auto-moderation, bad word filter, etc</p>
+          <p>Kick, ban, tban, etc</p>
         </div>
       </div>
-      <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
+      <div class="card blue-grey darken-3">
           <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
         <div class="card-content white-text">
-          <span class="card-title">Currency</span>
-          <p>Make items and give money to users.</p>
+          <span class="card-title">AutoMod</span>
+          <p>Auto Moderation</p>
+        </div>
+      </div>
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Bad Words</span>
+          <p>Configure banned words for the server</p>
         </div>
       </div>
     </div>
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
+    <div class="col s12 m3">
+      <div class="card blue-grey darken-3">
           <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
         <div class="card-content white-text">
           <span class="card-title">Leveling</span>
-          <p>Configure leveling for your server</p>
+          <p>Give ranks to users</p>
         </div>
       </div>
-      <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
+      <div class="card blue-grey darken-3">
           <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
         <div class="card-content white-text">
           <span class="card-title">Welcoming</span>
           <p>When a new user joins</p>
         </div>
       </div>
-      <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
+      <div class="card blue-grey darken-3">
           <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
         <div class="card-content white-text">
-          <span class="card-title">Custom commands</span>
-          <p>Yes we fucking did</p>
+          <span class="card-title">Custom</span>
+          <p>Custom Commands</p>
         </div>
       </div>
-      <div class="card blue-grey darken-3"  style="width: 310px; height: 110px;">
+      <div class="card blue-grey darken-3">
           <a class="btn-floating btn-large right waves-effect waves-light red" href="logs.html"><i class="material-icons">edit</i></a>
         <div class="card-content white-text">
           <span class="card-title">Logs</span>
@@ -140,11 +142,69 @@ animateCSS('stats', 'fadeIn');
         </div>
       </div>
     </div>
+    <div class="col s12 m3">
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Server Control</span>
+          <p>Which servers manager should talk in</p>
+        </div>
+      </div>
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Music</span>
+          <p>Music configuation for assassin</p>
+        </div>
+      </div>
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Other</span>
+          <p>Other commands</p>
+        </div>
+      </div>
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Coming Soon!</span>
+          <p>Coming Soon!</p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m3">
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Coming Soon!</span>
+          <p>Coming Soon!</p>
+        </div>
+      </div>
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Coming Soon!</span>
+          <p>Coming Soon!</p>
+        </div>
+      </div>
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Coming Soon!</span>
+          <p>Coming Soon!</p>
+        </div>
+      </div>
+      <div class="card blue-grey darken-3">
+          <a class="btn-floating btn-large right waves-effect waves-light red" href="logs.html"><i class="material-icons">edit</i></a>
+        <div class="card-content white-text">
+          <span class="card-title">Coming Soon!</span>
+          <p>Coming Soon!</p>
+        </div>
+      </div>
+    </div>
   </div>
-    <stats>
-  <div class="row right">
-    <div class="col s12 m6 left">
-      <div class="card blue-grey darken-3"  style="width: 639px; height: 485px;">
+    <div class="col s12 m12">
+      <div class="card blue-grey darken-3"  style="height: 485px;">
         <div class="card-content white-text">
           <span class="card-title center">Stats</span>
       <h2 class="teal-text text-lighten-4 center">
@@ -158,12 +218,7 @@ animateCSS('stats', 'fadeIn');
           </h2> <p class="center">Roles given out today</p>
         </div>
       </div>
-    </div>
-    <div class="col s12 m6 left">   
-    </div>
-    </div>
-    </stats>
-    
+    </div> 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
